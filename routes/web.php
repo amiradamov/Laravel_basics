@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,4 +13,15 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+Route::get('/hinkals', function () {
+    $hinkals = [
+        ['type' => 'Lezgi', 'base' => 'cheesy crust'],
+        ['type' => 'Avar', 'base' => 'garlic crust'],
+        ['type' => 'Lakskiy', 'base' => 'thin & crispy']
+    ];
+    return view('hinkal', ['hinkals' => $hinkals]);
+    // return "hinkal";
+    // return ['name' => 'hinkal', 'base' => 'Avar'];
 });
