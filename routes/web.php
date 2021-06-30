@@ -21,7 +21,13 @@ Route::get('/hinkals', function () {
         ['type' => 'Avar', 'base' => 'garlic crust'],
         ['type' => 'Lakskiy', 'base' => 'thin & crispy']
     ];
-    return view('hinkal', ['hinkals' => $hinkals]);
+    return view('hinkal', 
+    ['hinkals' => $hinkals,
+    'name' => request('name')]);
     // return "hinkal";
     // return ['name' => 'hinkal', 'base' => 'Avar'];
+});
+
+Route::get('/hinkals/{id}', function ($id) {
+    return view('details', ['id' => $id]);
 });

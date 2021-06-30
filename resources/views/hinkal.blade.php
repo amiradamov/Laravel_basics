@@ -7,6 +7,7 @@
         <div class="title m-b-md">
             Hinkal List
         </div>
+        <p>{{$name}}</p>
         @foreach($hinkals as $hinkal)
             <div>
                 {{ $loop->index }} - {{ $hinkal['type']}} - {{ $hinkal['base']}}
