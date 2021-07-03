@@ -7,17 +7,9 @@
         <div class="title m-b-md">
             Hinkal List
         </div>
-        <p>{{$name}}</p>
         @foreach($hinkals as $hinkal)
             <div>
-                {{ $loop->index }} - {{ $hinkal['type']}} - {{ $hinkal['base']}}
-
-                @if($loop->first)
-                <span>- first in the loop</span>
-                @endif
-                @if($loop->last)
-                <span>- last in the loop</span>
-                @endif
+                {{ $hinkal->name }} - {{ $hinkal->base }} - {{ $hinkal->type }};
             </div>
         @endforeach
     </div>

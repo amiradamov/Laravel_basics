@@ -5,8 +5,8 @@
 
     <div class="content">
         <div class="title m-b-md">
-            Hinkal List - {{$id}}
+            add a new hinkal
         </div>
     </div>
 </div>
-@endsection 
+@endsection

@@ -16,5 +16,5 @@ Route::get('/', function () {
 });
 
 Route::get('/hinkals', [HinkalController::class, 'index']);
-
+Route::get('/hinkals/create', [HinkalController::class, 'create']);
 Route::get('/hinkals/{id}', [HinkalController::class, 'show']);
