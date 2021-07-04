@@ -18,6 +18,7 @@
         <div class="title m-b-md">
             Caucasian best hinkal
         </div>
+        <a href="/hinkals/create">Order Hinkal</a>
     </div>
 </div>
 @endsection
