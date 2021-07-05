@@ -26,9 +26,14 @@ class HinkalController extends Controller
     }
 
     public function store() {
-        error_log(request('name'));
-        error_log(request('type'));
-        error_log(request('base'));
+        $hinkal = new Hinkal();      
+        $hinkal->name = request('name');
+        $hinkal->type = request('type');
+        $hinkal->base = request('base');
+
+        $hinkal->save();
+
+        error_log($hinkal);
 
         return redirect('/');
     }
