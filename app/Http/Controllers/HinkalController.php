@@ -30,11 +30,11 @@ class HinkalController extends Controller
         $hinkal->name = request('name');
         $hinkal->type = request('type');
         $hinkal->base = request('base');
-
+        $hinkal->toppings = request('toppings');
         $hinkal->save();
 
-        error_log($hinkal);
+        // return request('toppings');
 
-        return redirect('/');
+        return redirect('/')->with('mssg', 'Thank for your order'); 
     }
 }

@@ -10,4 +10,7 @@ class Hinkal extends Model
     use HasFactory;
     // if want overwrite table: protected $table = 'table_name';
     protected $table = 'hinkal';
+    protected $casts = [
+        'toppings' => 'array'
+    ];
 }
