@@ -17,4 +17,5 @@ Route::get('/', function () {
 
 Route::get('/hinkals', [HinkalController::class, 'index']);
 Route::get('/hinkals/create', [HinkalController::class, 'create']);
+Route::post('/hinkals', [HinkalController::class, 'store']);
 Route::get('/hinkals/{id}', [HinkalController::class, 'show']);

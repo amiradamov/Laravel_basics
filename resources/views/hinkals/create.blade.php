@@ -3,7 +3,8 @@
 @section('content')
 <div class="wrapper create-hinkal">
     <h1>Create a New Hinkal</h1>
-    <form action="" method="">
+    <form action="/hinkals" method="POST">
+        @csrf
         <label for="name">Your name:</label>
         <input type="text" id="name" name="name">
         <label for="type">Choose pizza type:</label>
