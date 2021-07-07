@@ -15,11 +15,11 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/hinkals', [HinkalController::class, 'index']);
+Route::get('/hinkals', [HinkalController::class, 'index'])->middleware('auth');
 Route::get('/hinkals/create', [HinkalController::class, 'create']);
 Route::post('/hinkals', [HinkalController::class, 'store']);
-Route::get('/hinkals/{id}', [HinkalController::class, 'show']);
-Route::delete('/hinkals/{id}',[HinkalController::class, 'destroy']); 
+Route::get('/hinkals/{id}', [HinkalController::class, 'show'])->middleware('auth');
+Route::delete('/hinkals/{id}',[HinkalController::class, 'destroy'])->middleware('auth'); 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
