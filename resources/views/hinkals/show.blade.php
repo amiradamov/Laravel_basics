@@ -11,6 +11,11 @@
             <li>{{$topping}}</li>
         @endforeach
     </ul>
+    <form action="/hinkals/{{ $hinkal->id }}" method="POST">
+        @csrf
+        @method('DELETE')
+        <button>Complete Order</button>
+    </form>
 </div>
 <a href="/hinkals" class="back">Back to menu</a>
 @endsection 

@@ -16,7 +16,7 @@ class CreateHinkalTable extends Migration
         Schema::create('hinkal', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->string('type');
+            $table->string('type'); 
             $table->string('base');
             $table->string('name');
             $table->json('toppings');

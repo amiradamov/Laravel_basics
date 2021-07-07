@@ -37,4 +37,11 @@ class HinkalController extends Controller
 
         return redirect('/')->with('mssg', 'Thank for your order'); 
     }
+
+    public function destroy($id) {
+        $hinkal = Hinkal::findorFail($id);
+        $hinkal->delete();
+
+        return redirect('/');
+    }
 }
