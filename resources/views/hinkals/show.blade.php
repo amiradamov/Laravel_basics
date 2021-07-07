@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 
 @section('content')
-<div class="wrapper pizza-details">
+<div class="wrapper hinkal-details">
     <h1>Order for {{ $hinkal->name }}</h1>
     <p class="type">Type - {{ $hinkal->type }}</p>
     <p class="base">base - {{ $hinkal->base }}</p>
