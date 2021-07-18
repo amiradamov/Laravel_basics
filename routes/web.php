@@ -16,10 +16,10 @@ Route::get('/', function () {
 });
 
 Route::get('/hinkals', [HinkalController::class, 'index'])->name('hinkals.index')->middleware('auth');
-Route::get('/hinkals/create', [HinkalController::class, 'create'])->name('hinkals.index');
-Route::post('/hinkals', [HinkalController::class, 'store'])->name('hinkals.index');
-Route::get('/hinkals/{id}', [HinkalController::class, 'show'])->name('hinkals.index')->middleware('auth');
-Route::delete('/hinkals/{id}',[HinkalController::class, 'destroy'])->name('hinkals.index')->middleware('auth'); 
+Route::get('/hinkals/create', [HinkalController::class, 'create'])->name('hinkals.create');
+Route::post('/hinkals', [HinkalController::class, 'store'])->name('hinkals.store');
+Route::get('/hinkals/{id}', [HinkalController::class, 'show'])->name('hinkals.show')->middleware('auth');
+Route::delete('/hinkals/{id}',[HinkalController::class, 'destroy'])->name('hinkals.show')->middleware('auth'); 
 Auth::routes([
     // 'verify' => true,
     'register' => false
