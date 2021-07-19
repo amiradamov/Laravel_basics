@@ -19,7 +19,7 @@
             Caucasian best hinkal
         </div>
         <p class="mssg">{{ session('mssg') }}</p>
-        <a href="/hinkals/create">Order Hinkal</a><br/>
+        <a href="{{ route('hinkals.create') }}">Order Hinkal</a><br/>
     </div>
 </div>
 @endsection

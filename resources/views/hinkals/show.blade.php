@@ -11,7 +11,7 @@
             <li>{{$topping}}</li>
         @endforeach
     </ul>
-    <form action="/hinkals/{{ $hinkal->id }}" method="POST">
+    <form action="{{ route('hinkals.destroy', $hinkal->id) }}" method="POST">
         @csrf
         @method('DELETE')
         <button>Complete Order</button>

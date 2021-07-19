@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="wrapper create-hinkal">
-    <h1>Create a New Hinkal</h1>
+    <h1>Order Hinkal</h1>
     <form action="/hinkals" method="POST">
         @csrf
         <label for="name">Your name:</label>
