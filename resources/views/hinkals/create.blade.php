@@ -7,7 +7,7 @@
         @csrf
         <label for="name">Your name:</label>
         <input type="text" id="name" name="name">
-        <label for="type">Choose pizza type:</label>
+        <label for="type">Choose hinkal type:</label>
         <select name="type" id="type">
             <option value="avar">Avar</option>
             <option value="lezgi">Lezgi</option>

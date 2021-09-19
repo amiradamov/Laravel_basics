@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Hinkal;
+use App\Models\Member;
 class HinkalController extends Controller
 {
     public function index() {
@@ -14,6 +15,13 @@ class HinkalController extends Controller
         return view('hinkals.index', [
             'hinkals' => $hinkals, 
     ]);
+    }
+
+    public function member() {
+        $members = Member::all();
+        return view('layouts.member', [
+            'members' => $members,
+        ]);
     }
 
     public function show($id) {
@@ -31,17 +39,18 @@ class HinkalController extends Controller
         $hinkal->type = request('type');
         $hinkal->base = request('base');
         $hinkal->toppings = request('toppings');
+        $hinkal->hide = 0;
         $hinkal->save();
 
         // return request('toppings');
 
-        return redirect('/')->with('mssg', 'Thank for your order'); 
+        return redirect('/')->with('mssg', 'Thanks for your order'); 
     }
 
     public function destroy($id) {
         $hinkal = Hinkal::findorFail($id);
-        $hinkal->delete();
-
+        $hinkal->hide = "1";
+        $hinkal->save();
         return redirect('/');
     }
 }

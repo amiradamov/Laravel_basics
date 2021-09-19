@@ -15,11 +15,16 @@
 
     <div class="content">
     <!-- <img src="/img/logo_hinkal.png" alt="hinkal house logo" width="250px" height="250px"> -->
+        <p>Caucasian best hinkal</p>
         <div class="title m-b-md">
-            Caucasian best hinkal
+            HinkalHouse
         </div>
         <p class="mssg">{{ session('mssg') }}</p>
         <a href="{{ route('hinkals.create') }}">Order Hinkal</a><br/>
+        <div>
+        <p>Sign in to receive bonuses and gifts</p>
+        <a href="">LOGIN</a>
+        </div>
     </div>
 </div>
 @endsection

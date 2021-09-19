@@ -13,13 +13,14 @@ class CreateHinkalTable extends Migration
      */
     public function up()
     {
-        Schema::create('hinkal', function (Blueprint $table) {
+        Schema::create('hinkal', function (  $table) {
             $table->id();
             $table->timestamps();
             $table->string('type'); 
             $table->string('base');
             $table->string('name');
             $table->json('toppings');
+            $table->string('hide');
         });
     }
 
